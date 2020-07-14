@@ -59,8 +59,7 @@ console.log(dogYears(30, 7));
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
 function dogFeeder(weight, age){
-    
-    if(age >= 1 && weight <= 5){
+     if(age >= 1 && weight <= 5){
             return weight * .05;
         }
         else if(age >= 1 && weight <=10){
@@ -71,20 +70,19 @@ function dogFeeder(weight, age){
         }
         else if(age >= 1 && weight > 15){
             return(.02 * weight);
+        } 
+        else if (age >= 0.1667 && age < 0.3334){
+            return weight * .1;
+         }
+        else if(age >= 0.3334 && age < 0.583){
+            return weight * .05;
         }
-} else {
-    if(age >= 2/12 && age < 4/12){
-        return weight * .10;
-    }
-    else if (age >= 4/12 && age < 7/12){
-        return (weight * .05;
-    }
-    else if (age >= 7/12 && age < 12/12) {
+    else if (age >= 0.583 && age < 1) {
         return weight * .04;
     }
 } 
 
-console.log(dogFeeder(15,1));
+console.log(dogFeeder(15, 1));
 
 /************************************************************** Task 4 **************************************************************/
 // Rock, Paper, Sissors
@@ -93,19 +91,45 @@ console.log(dogFeeder(15,1));
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-  
-  
+let userChoice = prompt("Choose Rock, Paper, or Scissors");
+let computerChoice = Math.random();
+      if(computerChoice < 0.34) {
+          computerChoice = 'Rock';
+      } else if (computerChoice <= 0.67){
+          computerChoice = 'Paper';
+      } else {
+          computerChoice = 'Scissors';
+      }
+
+let compare = function(computer, player){
+    if(computer === player){
+        return 'Tie';
+    }
+    else if (computer === 'Rock' && player === 'Paper') {
+        return 'Paper Wins';
+    }
+    else if (computer === 'Paper' && player === 'Rock') {
+        return 'Paper Wins';
+    }
+    else if (computer === 'Scissors' && player === 'Paper') {
+        return 'Scissors Wins';
+    }
+}
+    console.log()
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
+        // mi=km*0.62137
 
-
-
+function convert(km){
+        return(km * 0.62137);
+    }
+    console.log(convert(3));
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
-  
+        // cm=ft/0.032808
 
 
 
