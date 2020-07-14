@@ -1,34 +1,43 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
+let age = 30
+let votingAge = 18;
 
-
-
+if(age >= votingAge){
+    console.log('True');
+}
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
+let i = 0;
+let j = 5;
 
-
-
+while(i <= j){
+    i++;
+}
+console.log(i);
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
-
-
-
+console.log(Number('1999'));
 
 //Task d: Write a function to multiply a*b 
 
-
-
-
+function multiply(num1, num2){
+    return(num1*num2);
+}
+console.log(multiply(5,5));
 
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
-
-
+let age = 30;
+function dogYears(age, dogAge){
+    return(dogAge * age)
+}
+console.log(dogYears(30, 7));
 
 
 /************************************************************** Task 3 **************************************************************/
@@ -49,9 +58,33 @@
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
+function dogFeeder(weight, age){
+    
+    if(age >= 1 && weight <= 5){
+            return weight * .05;
+        }
+        else if(age >= 1 && weight <=10){
+            return weight * .04;
+        }
+        else if(age >= 1 && weight <= 15){
+            return weight * .03;
+        }
+        else if(age >= 1 && weight > 15){
+            return(.02 * weight);
+        }
+} else {
+    if(age >= 2/12 && age < 4/12){
+        return weight * .10;
+    }
+    else if (age >= 4/12 && age < 7/12){
+        return (weight * .05;
+    }
+    else if (age >= 7/12 && age < 12/12) {
+        return weight * .04;
+    }
+} 
 
-
-
+console.log(dogFeeder(15,1));
 
 /************************************************************** Task 4 **************************************************************/
 // Rock, Paper, Sissors
