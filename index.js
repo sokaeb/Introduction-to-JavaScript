@@ -33,7 +33,6 @@ console.log(multiply(5,5));
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
-let age = 30;
 function dogYears(age, dogAge){
     return(dogAge * age)
 }
@@ -123,7 +122,7 @@ let compare = function(computer, player){
         // mi=km*0.62137
 
 function convert(km){
-        return(km * 0.62137);
+        return km * 0.62137;
     }
     console.log(convert(3));
 
@@ -131,7 +130,10 @@ function convert(km){
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
         // cm=ft/0.032808
 
-
+function converter(ft){
+    return ft/0.032808;
+}
+console.log(converter(3));
 
 
 /************************************************************** Task 6 **************************************************************/
@@ -139,8 +141,16 @@ function convert(km){
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
+function annoyingSong(num1){
+    let num2 = num1;
+    for(let i = 0; i < num1; i++){
+        console.log(num2 + ' bottles of soda on the wall, ' + num2 + ' bottles of soda, take one down pass it around ' + (num2 - 1) + ' bottles of soda on the wall');
+        num2--;
+    }
+    
+}
 
-
+annoyingSong(4);
 
 
 /************************************************************** Task 7 **************************************************************/
@@ -151,6 +161,10 @@ function convert(km){
 //70s should be Cs 
 //60s should be D 
 //and anything below 60 should be F
+
+function grade(mark){
+    if(mark >= 90)
+}
   
 
   
