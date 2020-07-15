@@ -190,7 +190,10 @@ console.log(grade(50));
 // Hint - you may need to study tomorrow's traning kit on arrays 
 // try looking up the .includes() method
 
-
+// let word = 'alphabet';
+// function vowelCount(word){
+//     String.includes()
+// }
 
 
 
@@ -211,14 +214,11 @@ let computerChoice = Math.random();
 let compare = function(pick1, pick2){ 
     if(pick1 === pick2){
         return 'tie';
-    }
-    else if(pick1 === 'rock' && pick2 === 'paper' || pick1 === 'paper' && pick2 === 'rock' ){
+    }else if(pick1 === 'rock' && pick2 === 'paper' || pick1 === 'paper' && pick2 === 'rock' ){
         return 'Paper Wins';
-    }
-    else if(pick1 === 'rock' && pick2 === 'scissors' || pick1 === 'scissors' && pick2 === 'rock'){
+    }else if(pick1 === 'rock' && pick2 === 'scissors' || pick1 === 'scissors' && pick2 === 'rock'){
         return 'Rock Wins';
-    }
-    else if(pick1 === 'paper' && pick2 === 'scissors' || pick1 === 'scissors' && pick2 === 'paper'){
+    }else if(pick1 === 'paper' && pick2 === 'scissors' || pick1 === 'scissors' && pick2 === 'paper'){
         return 'Scissors Wins';
     }
 }
