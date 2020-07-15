@@ -190,11 +190,18 @@ console.log(grade(50));
 // Hint - you may need to study tomorrow's traning kit on arrays 
 // try looking up the .includes() method
 
-// let word = 'alphabet';
+
 // function vowelCount(word){
-//     String.includes()
+//     vowelCount = 0;
+//     for(let i = 0; i <= string.length; i++){
+//        if(string.includes('a', 'e', 'i', 'o', 'u')){
+//            vowelCount += 1;
+//        }
+//        return vowelCount;
+//     }
 // }
 
+// console.log(vowelCount());
 
 
 /************************************************************** Stretch **************************************************************/
