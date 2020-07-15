@@ -92,29 +92,30 @@ console.log(dogFeeder(15, 1));
 
 let userChoice = prompt("Choose Rock, Paper, or Scissors");
 let computerChoice = Math.random();
-      if(computerChoice < 0.34) {
-          computerChoice = 'Rock';
-      } else if (computerChoice <= 0.67){
-          computerChoice = 'Paper';
-      } else {
-          computerChoice = 'Scissors';
+      if(computerChoice < 0.34){
+          computerChoice = 'rock';
+      }else if (computerChoice <= 0.67){
+          computerChoice = 'paper';
+      }else {
+          computerChoice = 'scissors';
       }
 
-let compare = function(computer, player){
-    if(computer === player){
-        return 'Tie';
+let compare = function(pick1, pick2){
+    
+    if(pick1 === pick2){
+        return 'tie';
     }
-    else if (computer === 'Rock' && player === 'Paper') {
+    else if (pick1 === 'rock' && pick2 === 'paper' || pick1 === 'paper' && pick2 === 'rock' ){
         return 'Paper Wins';
     }
-    else if (computer === 'Paper' && player === 'Rock') {
-        return 'Paper Wins';
+    else if (pick1 === 'rock' && pick2 === 'scissors' || pick1 === 'scissors' && pick2 === 'rock'){
+        return 'Rock Wins';
     }
-    else if (computer === 'Scissors' && player === 'Paper') {
+    else if (pick1 === 'paper' && pick2 === 'scissors' || pick1 === 'scissors' && pick2 === 'paper'){
         return 'Scissors Wins';
     }
 }
-    console.log()
+    console.log(compare(userChoice, computerChoice));
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
@@ -146,12 +147,10 @@ function annoyingSong(num1){
     for(let i = 0; i < num1; i++){
         console.log(num2 + ' bottles of soda on the wall, ' + num2 + ' bottles of soda, take one down pass it around ' + (num2 - 1) + ' bottles of soda on the wall');
         num2--;
-    }
-    
+    } 
 }
 
-annoyingSong(4);
-
+annoyingSong(6);
 
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
@@ -163,13 +162,23 @@ annoyingSong(4);
 //and anything below 60 should be F
 
 function grade(mark){
-    if(mark >= 90)
+    if(mark >= 90) {
+        return 'A';
+    } else if (mark >= 80){
+        return 'B'
+    } else if (mark >= 70){
+        return 'C' 
+    } else if (mark >= 60){
+        return 'D' 
+    } else {
+        return 'F'
+    }
 }
+
+console.log(grade(50));
   
 
   
-  
-
 /************************************************************** Stretch **************************************************************/
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
 // Hint - you may need to study tomorrow's traning kit on arrays 
