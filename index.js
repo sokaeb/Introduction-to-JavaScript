@@ -1,8 +1,8 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
-let age = 30
 let votingAge = 18;
+let age = 30
 
 if(age >= votingAge){
     console.log('True');
@@ -10,13 +10,19 @@ if(age >= votingAge){
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
-let i = 0;
-let j = 5;
-
-while(i <= j){
-    i++;
+let stage = 'yourStage';
+let year = 0;
+if (year <= 3){
+    console.log('toddler');
+}else if (year <= 8){
+    console.log('youth');
+}else if (year <= 14){
+    console.log('preteen');
+}else if (year <= 18){
+    console.log('teenager');
+}else {
+    console.log('adult');
 }
-console.log(i);
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
@@ -33,10 +39,11 @@ console.log(multiply(5,5));
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
-function dogYears(age, dogAge){
+let dogAge = 7;
+function dogYears(dogAge, age){
     return(dogAge * age)
 }
-console.log(dogYears(30, 7));
+console.log(dogYears(dogAge, 30));
 
 
 /************************************************************** Task 3 **************************************************************/
@@ -90,32 +97,31 @@ console.log(dogFeeder(15, 1));
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-let userChoice = prompt("Choose Rock, Paper, or Scissors");
-let computerChoice = Math.random();
-      if(computerChoice < 0.34){
-          computerChoice = 'rock';
-      }else if (computerChoice <= 0.67){
-          computerChoice = 'paper';
-      }else {
-          computerChoice = 'scissors';
-      }
+// let userChoice = 'scissors';
+// let computerChoice = Math.random();
+//       if(computerChoice < 0.34){
+//           computerChoice = 'rock';
+//       }else if (computerChoice <= 0.67){
+//           computerChoice = 'paper';
+//       }else {
+//           computerChoice = 'scissors';
+//       }
 
-let compare = function(pick1, pick2){
-    
-    if(pick1 === pick2){
-        return 'tie';
-    }
-    else if (pick1 === 'rock' && pick2 === 'paper' || pick1 === 'paper' && pick2 === 'rock' ){
-        return 'Paper Wins';
-    }
-    else if (pick1 === 'rock' && pick2 === 'scissors' || pick1 === 'scissors' && pick2 === 'rock'){
-        return 'Rock Wins';
-    }
-    else if (pick1 === 'paper' && pick2 === 'scissors' || pick1 === 'scissors' && pick2 === 'paper'){
-        return 'Scissors Wins';
-    }
-}
-    console.log(compare(userChoice, computerChoice));
+// let compare = function(pick1, pick2){ 
+//     if(pick1 === pick2){
+//         return 'tie';
+//     }
+//     else if(pick1 === 'rock' && pick2 === 'paper' || pick1 === 'paper' && pick2 === 'rock' ){
+//         return 'Paper Wins';
+//     }
+//     else if(pick1 === 'rock' && pick2 === 'scissors' || pick1 === 'scissors' && pick2 === 'rock'){
+//         return 'Rock Wins';
+//     }
+//     else if(pick1 === 'paper' && pick2 === 'scissors' || pick1 === 'scissors' && pick2 === 'paper'){
+//         return 'Scissors Wins';
+//     }
+// }
+//     console.log(compare(userChoice, computerChoice));
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
@@ -192,7 +198,29 @@ console.log(grade(50));
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
 
+let userChoice = prompt("Choose Rock, Paper, or Scissors");
+let computerChoice = Math.random();
+      if(computerChoice < 0.34){
+          computerChoice = 'rock';
+      }else if (computerChoice <= 0.67){
+          computerChoice = 'paper';
+      }else {
+          computerChoice = 'scissors';
+      }
 
-
-
+let compare = function(pick1, pick2){ 
+    if(pick1 === pick2){
+        return 'tie';
+    }
+    else if(pick1 === 'rock' && pick2 === 'paper' || pick1 === 'paper' && pick2 === 'rock' ){
+        return 'Paper Wins';
+    }
+    else if(pick1 === 'rock' && pick2 === 'scissors' || pick1 === 'scissors' && pick2 === 'rock'){
+        return 'Rock Wins';
+    }
+    else if(pick1 === 'paper' && pick2 === 'scissors' || pick1 === 'scissors' && pick2 === 'paper'){
+        return 'Scissors Wins';
+    }
+}
+    console.log(compare(userChoice, computerChoice));
 
